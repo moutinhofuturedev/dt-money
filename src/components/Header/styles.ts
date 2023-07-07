@@ -27,6 +27,7 @@ export const HeaderLogo = styled.div`
 
 export const NewTransactionButton = styled.button`
   height: 50px;
+  min-width: 160px;
   border: 0;
   background: ${(props) => props.theme['green-500']};
   color: ${(props) => props.theme.white};
