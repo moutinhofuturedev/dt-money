@@ -6,15 +6,20 @@ import {
 } from './styles'
 import logoImg from '../../assets/logo.svg'
 
-export const Header = () => {
+export type HeaderProps = {
+  title: string
+  name: string
+}
+
+export const Header = ({ title, name }: HeaderProps) => {
   return (
     <HeaderContainer>
       <HeaderContent>
         <HeaderLogo>
           <img src={logoImg} alt="DT Money" />
-          <strong>DT Money</strong>
+          <strong>{title}</strong>
         </HeaderLogo>
-        <NewTransactionButton>Nova transação</NewTransactionButton>
+        <NewTransactionButton>{name}</NewTransactionButton>
       </HeaderContent>
     </HeaderContainer>
   )
