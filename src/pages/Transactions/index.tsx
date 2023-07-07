@@ -4,7 +4,7 @@ import { Summary } from '../../components/Summary'
 export const Transactions = () => {
   return (
     <>
-      <Header />
+      <Header title="DT Money" name="Nova transação" />
       <Summary />
     </>
   )
