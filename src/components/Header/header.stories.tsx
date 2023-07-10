@@ -1,14 +1,11 @@
 import { Meta, StoryObj } from '@storybook/react'
 import { Header } from '.'
 
-const meta: Meta<typeof Header> = {
+const meta = {
   title: 'Components/Header',
   component: Header,
   tags: ['autodocs'],
-  parameters: {
-    layout: 'fullscreen',
-  },
-}
+} satisfies Meta<typeof Header>
 
 export default meta
 
