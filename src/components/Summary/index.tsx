@@ -1,32 +1,28 @@
-import { SummaryContainer, SummaryCard } from './styles'
+import { SummaryCard } from './SummaryCards'
+import { SummaryContainer } from './styles'
 import { ArrowUpCircle, ArrowDownCircle, DollarSign } from 'lucide-react'
 
 export const Summary = () => {
   return (
     <SummaryContainer>
-      <SummaryCard>
-        <header>
-          <span>Entradas</span>
-          <ArrowUpCircle size={32} color="#00B37E" />
-        </header>
-        <strong>R$ 17.400,00</strong>
-      </SummaryCard>
-
-      <SummaryCard>
-        <header>
-          <span>Saídas</span>
-          <ArrowDownCircle size={32} color="#F75A68" />
-        </header>
-        <strong>R$ 1.259,00</strong>
-      </SummaryCard>
-
-      <SummaryCard variant="green">
-        <header>
-          <span>Total</span>
-          <DollarSign size={32} color="#FFFFFF" />
-        </header>
-        <strong>R$ 16.141,00</strong>
-      </SummaryCard>
+      <SummaryCard
+        coloring="gray"
+        headerType="Entradas"
+        icon={<ArrowUpCircle size={32} color="#00B37E" />}
+        values="R$ 17.400,00"
+      />
+      <SummaryCard
+        coloring="gray"
+        headerType="Saídas"
+        icon={<ArrowDownCircle size={32} color="#F75A68" />}
+        values="R$ 1.259,00"
+      />
+      <SummaryCard
+        coloring="green"
+        headerType="Total"
+        icon={<DollarSign size={32} color="#FFFFFF" />}
+        values="R$ 17.400,00"
+      />
     </SummaryContainer>
   )
 }
