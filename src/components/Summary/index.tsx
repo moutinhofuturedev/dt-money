@@ -15,13 +15,13 @@ export const Summary = () => {
         coloring="gray"
         headerType="Saídas"
         icon={<ArrowDownCircle size={32} color="#F75A68" />}
-        values="R$ 1.259,00"
+        values="R$ 8.259,00"
       />
       <SummaryCard
         coloring="green"
         headerType="Total"
         icon={<DollarSign size={32} color="#FFFFFF" />}
-        values="R$ 17.400,00"
+        values="R$ 9.141,00"
       />
     </SummaryContainer>
   )

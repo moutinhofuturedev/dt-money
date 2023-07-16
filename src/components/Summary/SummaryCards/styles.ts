@@ -7,6 +7,7 @@ export type SummaryCardsProps = {
 export const SummaryCardStyle = styled.div<SummaryCardsProps>`
   border-radius: 6px;
   padding: 2rem;
+  margin-bottom: 1.5rem;
 
   header {
     display: flex;
