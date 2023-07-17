@@ -1,12 +1,12 @@
 import styled, { css } from 'styled-components'
 
-export const TransactionsContainer = styled.main`
+export const TransactionContainer = styled.main`
   width: 100%;
   max-width: 1120px;
   margin: 0 auto;
   padding: 0 1.5rem;
 `
-export const TransactionsTable = styled.table`
+export const TransactionTable = styled.table`
   width: 100%;
   border-collapse: separate;
   border-spacing: 0 0.5rem;
