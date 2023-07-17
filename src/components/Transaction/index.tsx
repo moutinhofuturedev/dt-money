@@ -1,6 +1,6 @@
 import {
-  TransactionsContainer,
-  TransactionsTable,
+  TransactionContainer,
+  TransactionTable,
   PriceHighLight,
 } from './styles'
 
@@ -24,8 +24,8 @@ export const Transaction = ({
   typeExpense,
 }: TransactionTableProps) => {
   return (
-    <TransactionsContainer>
-      <TransactionsTable>
+    <TransactionContainer>
+      <TransactionTable>
         <tbody>
           <tr>
             <td>{tableTitle}</td>
@@ -38,7 +38,7 @@ export const Transaction = ({
             <td>{formatDate(tableDate)}</td>
           </tr>
         </tbody>
-      </TransactionsTable>
-    </TransactionsContainer>
+      </TransactionTable>
+    </TransactionContainer>
   )
 }

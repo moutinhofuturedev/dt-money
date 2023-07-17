@@ -1,4 +1,5 @@
 import { Header } from '../../components/Header'
+import { SearchForm } from '../../components/SearchForm'
 import { Summary } from '../../components/Summary'
 import { Transaction } from '../../components/Transaction'
 
@@ -7,6 +8,7 @@ export const Transactions = () => {
     <>
       <Header title="DT Money" name="Nova transação" />
       <Summary />
+      <SearchForm />
       <Transaction
         typeExpense="income"
         tableTitle="Desenvolvimento de site"

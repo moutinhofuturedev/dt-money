@@ -5,7 +5,7 @@ const meta = {
   title: 'Components/Transaction',
   component: Transaction,
   tags: ['autodocs'],
-} as Meta<typeof Transaction>
+} satisfies Meta<typeof Transaction>
 
 export default meta
 
