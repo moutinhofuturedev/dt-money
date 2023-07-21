@@ -4,7 +4,9 @@ import {
   HeaderLogo,
   NewTransactionButton,
 } from './styles'
+import { NewTransactionModal } from '../NewTransaction'
 import logoImg from '../../assets/logo.svg'
+import * as Dialog from '@radix-ui/react-dialog'
 
 export type HeaderProps = {
   title: string
@@ -19,7 +21,12 @@ export const Header = ({ title, name }: HeaderProps) => {
           <img src={logoImg} alt="DT Money" />
           <strong>{title}</strong>
         </HeaderLogo>
-        <NewTransactionButton>{name}</NewTransactionButton>
+        <Dialog.Root>
+          <Dialog.Trigger asChild>
+            <NewTransactionButton>{name}</NewTransactionButton>
+          </Dialog.Trigger>
+          <NewTransactionModal />
+        </Dialog.Root>
       </HeaderContent>
     </HeaderContainer>
   )
