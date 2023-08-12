@@ -16,19 +16,20 @@ type ColorsGridVariants = {
     | '#F75A68'
     | '#AB222E'
     | '#7A1921'
-    | '#fff'
+    | '#FFF'
+    | '#000'
 }
 
 export const ColorsGridContainer = styled.div<ColorsGridVariants>`
   padding: 2rem;
   background: ${(props) => props.variant};
 `
-export const ColorsGridContent = styled.div`
+export const ColorsGridContent = styled.div<ColorsGridVariants>`
   display: flex;
   justify-content: space-between;
 
   span,
   strong {
-    color: ${(props) => props.theme.white};
+    color: ${(props) => props.variant};
   }
 `
