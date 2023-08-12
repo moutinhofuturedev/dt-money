@@ -1,5 +1,6 @@
-import { render, fireEvent, screen } from '@testing-library/react'
+import { render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
+
 import { SearchForm } from '.'
 
 describe('SearchForm', () => {
@@ -18,7 +19,7 @@ describe('SearchForm', () => {
 
     // Preenche o campo de busca
     const searchInput = screen.getByPlaceholderText('Busque por transações')
-    fireEvent.change(searchInput, { target: { value: 'Exemplo de busca' } })
+    userEvent.type(searchInput, 'Exemplo de busca')
 
     // Clica no botão de busca
     const searchButton = screen.getByText('Buscar')
