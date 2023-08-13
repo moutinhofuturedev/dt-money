@@ -4,7 +4,7 @@ import {
   PriceHighLight,
 } from './styles'
 
-type TransactionTableProps = {
+export type TransactionTableProps = {
   tableTitle: string
   tableValue: string
   tableType: string
