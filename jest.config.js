@@ -12,7 +12,7 @@ module.exports = {
     '!<rootDir>/coverage/**',
   ],
   moduleNameMapper: {
-    '\\.(gif|ttf|eot|svg|png)$': '<rootDir>/.jest/mocks/fileMock.js',
+    '\\.(gif|ttf|eot|svg|png)$': '<rootDir>/.jest/mocks/fileMock.ts',
     '\\.(css|less|sass|scss)$': 'identity-obj-proxy',
   },
   transform: {
