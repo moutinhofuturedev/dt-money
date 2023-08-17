@@ -9,6 +9,7 @@ export const ColorsGrid = () => {
         <ColorsGridContent
           variant={getContrast(color, '#FFF') < 3.5 ? '#000' : '#FFF'}
           key={key}
+          data-testid={`color-entry-${key}`}
         >
           <strong>${key}</strong>
           <span>{color}</span>
