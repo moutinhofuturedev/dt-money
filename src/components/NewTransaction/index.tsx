@@ -23,11 +23,11 @@ export const NewTransactionModal = () => {
           <input type="text" placeholder="Categoria" required />
 
           <TransactionType>
-            <TransactionTypeButton variant="income">
+            <TransactionTypeButton variant="income" value="income">
               <ArrowUpCircle size={24} />
               Entrada
             </TransactionTypeButton>
-            <TransactionTypeButton variant="outcome">
+            <TransactionTypeButton variant="outcome" value="outcome">
               <ArrowDownCircle size={24} />
               Saída
             </TransactionTypeButton>
