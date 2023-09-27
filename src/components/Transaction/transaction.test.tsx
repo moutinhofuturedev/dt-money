@@ -3,11 +3,11 @@ import { Transaction, TransactionTableProps } from '.'
 
 describe('Transaction', () => {
   const mockTransaction: TransactionTableProps = {
-    tableTitle: 'Item A',
-    tableValue: '100.00',
-    tableType: 'Category',
+    tableDescription: 'Item A',
+    tablePrice: 100.0,
+    tableCategory: 'Category',
     tableDate: '2023-08-12',
-    typeExpense: 'outcome',
+    tableExpense: 'outcome',
   }
 
   it('renders the transaction details correctly', () => {
@@ -17,26 +17,30 @@ describe('Transaction', () => {
       mockTransaction.tableDate,
     ).toLocaleDateString()
 
-    const title = screen.getByText(mockTransaction.tableTitle)
-    const values = screen.getByText(mockTransaction.tableValue)
-    const types = screen.getByText(mockTransaction.tableType)
+    const description = screen.getByText(mockTransaction.tableDescription)
+    const price = screen.getByText(
+      new RegExp(mockTransaction.tablePrice.toString()),
+    ) // Usar regex
+    const category = screen.getByText(mockTransaction.tableCategory)
     const formatted = screen.getByText(formattedDate)
 
-    expect(title).toBeInTheDocument()
-    expect(values).toBeInTheDocument()
-    expect(types).toBeInTheDocument()
+    expect(description).toBeInTheDocument()
+    expect(price).toBeInTheDocument()
+    expect(category).toBeInTheDocument()
     expect(formatted).toBeInTheDocument()
   })
 
   it('applies the correct styling for income transactions', () => {
     const incomeTransaction: TransactionTableProps = {
       ...mockTransaction,
-      typeExpense: 'income',
+      tableExpense: 'income',
     }
 
     render(<Transaction {...incomeTransaction} />)
 
-    const priceElements = screen.getAllByText(incomeTransaction.tableValue)
+    const priceElements = screen.getAllByText(
+      new RegExp(incomeTransaction.tablePrice.toString()),
+    ) // Usar regex
 
     expect(priceElements[0]).toBeInTheDocument()
   })

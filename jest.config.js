@@ -11,6 +11,8 @@ module.exports = {
     '!<rootDir>/*.config.js',
     '!<rootDir>/coverage/**',
   ],
+  moduleDirectories: ['node_modules', '<rootDir>/'],
+  testPathIgnorePatterns: ['/node_modules/'],
   moduleNameMapper: {
     '\\.(gif|ttf|eot|svg|png)$': '<rootDir>/.jest/mocks/fileMock.ts',
     '\\.(css|less|sass|scss)$': 'identity-obj-proxy',
