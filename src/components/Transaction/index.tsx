@@ -3,13 +3,12 @@ import {
   TransactionTable,
   PriceHighLight,
 } from './styles'
-
-export type TransactionTableProps = {
-  tableTitle: string
-  tableValue: string
-  tableType: string
+export interface TransactionTableProps {
+  tableDescription: string
+  tablePrice: number
+  tableCategory: string
   tableDate: string
-  typeExpense: 'income' | 'outcome'
+  tableExpense: 'income' | 'outcome'
 }
 
 const formatDate = (date: string) => {
@@ -17,24 +16,24 @@ const formatDate = (date: string) => {
 }
 
 export const Transaction = ({
-  tableTitle,
-  tableValue,
-  tableType,
+  tableDescription,
+  tablePrice,
+  tableCategory,
   tableDate,
-  typeExpense,
+  tableExpense,
 }: TransactionTableProps) => {
   return (
     <TransactionContainer>
       <TransactionTable>
         <tbody>
           <tr>
-            <td>{tableTitle}</td>
+            <td>{tableDescription}</td>
             <td>
-              <PriceHighLight variant={typeExpense}>
-                {tableValue}
+              <PriceHighLight variant={tableExpense}>
+                {`R$ ${tablePrice}`}
               </PriceHighLight>
             </td>
-            <td>{tableType}</td>
+            <td>{tableCategory}</td>
             <td>{formatDate(tableDate)}</td>
           </tr>
         </tbody>
