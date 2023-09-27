@@ -11,20 +11,20 @@ export default meta
 
 export const Rendas: StoryObj<typeof Transaction> = {
   args: {
-    tableTitle: 'Salário',
-    tableValue: 'R$ 5.400,00',
-    tableType: 'Salário',
+    tableDescription: 'Salário',
+    tablePrice: 5.4,
+    tableCategory: 'Salário',
     tableDate: '06/04/2023',
-    typeExpense: 'income',
+    tableExpense: 'income',
   },
 }
 
 export const Despesas: StoryObj<typeof Transaction> = {
   args: {
-    tableTitle: 'Contas',
-    tableValue: '- R$ 5.400,00',
-    tableType: 'Contas',
+    tableDescription: 'Contas',
+    tablePrice: 5.4,
+    tableCategory: 'Contas',
     tableDate: '06/04/2023',
-    typeExpense: 'outcome',
+    tableExpense: 'outcome',
   },
 }
