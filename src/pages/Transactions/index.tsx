@@ -3,7 +3,7 @@ import { Header } from '../../components/Header'
 import { SearchForm } from '../../components/SearchForm'
 import { Summary } from '../../components/Summary'
 import { Transaction } from '../../components/Transaction'
-import { TransactionsContext } from '../../contexts/TransactionContext'
+import { TransactionsContext } from '../../context/TransactionContext'
 
 export const Transactions = () => {
   const { transactions } = useContext(TransactionsContext)
