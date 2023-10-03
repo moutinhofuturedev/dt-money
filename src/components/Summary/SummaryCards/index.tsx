@@ -1,10 +1,10 @@
 import { ReactNode } from 'react'
 import { SummaryCardStyle } from './styles'
 
-type CardValues = {
-  headerType: string
+type CardValues<T, U> = {
+  headerType: T
   icon: ReactNode
-  values: string
+  values: U
   coloring?: 'green' | 'gray'
 }
 
@@ -13,7 +13,7 @@ export const SummaryCard = ({
   values,
   icon,
   coloring,
-}: CardValues) => {
+}: CardValues<string, number>) => {
   return (
     <SummaryCardStyle variant={coloring}>
       <header>
