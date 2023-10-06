@@ -5,13 +5,13 @@ import { priceFormatter } from '../../../utils/formatter'
 type CardValues<T, U> = {
   headerType: T
   icon: ReactNode
-  values: U
+  price: U
   coloring?: 'green' | 'gray'
 }
 
 export const SummaryCard = ({
   headerType,
-  values,
+  price,
   icon,
   coloring,
 }: CardValues<string, number>) => {
@@ -21,7 +21,7 @@ export const SummaryCard = ({
         <div>{headerType}</div>
         {icon}
       </header>
-      <strong>{priceFormatter.format(values)}</strong>
+      <strong>{priceFormatter.format(price)}</strong>
     </SummaryCardStyle>
   )
 }

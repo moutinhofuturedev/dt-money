@@ -32,19 +32,19 @@ export const Summary = () => {
         coloring="gray"
         headerType="Entradas"
         icon={<ArrowUpCircle size={32} color="#00B37E" />}
-        values={income}
+        price={income}
       />
       <SummaryCard
         coloring="gray"
         headerType="Saídas"
         icon={<ArrowDownCircle size={32} color="#F75A68" />}
-        values={outcome}
+        price={outcome}
       />
       <SummaryCard
         coloring="green"
         headerType="Total"
         icon={<DollarSign size={32} color="#FFFFFF" />}
-        values={total}
+        price={total}
       />
     </SummaryContainer>
   )
