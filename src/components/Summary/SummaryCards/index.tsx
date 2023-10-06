@@ -1,5 +1,6 @@
 import { ReactNode } from 'react'
 import { SummaryCardStyle } from './styles'
+import { priceFormatter } from '../../../utils/formatter'
 
 type CardValues<T, U> = {
   headerType: T
@@ -17,10 +18,10 @@ export const SummaryCard = ({
   return (
     <SummaryCardStyle variant={coloring}>
       <header>
-        <span>{headerType}</span>
+        <div>{headerType}</div>
         {icon}
       </header>
-      <strong>{values}</strong>
+      <strong>{priceFormatter.format(values)}</strong>
     </SummaryCardStyle>
   )
 }
