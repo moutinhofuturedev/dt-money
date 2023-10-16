@@ -1,6 +1,6 @@
 import { ReactNode, createContext, useEffect, useState } from 'react'
 
-interface TransactionType {
+export interface TransactionType {
   id: number
   description: string
   expense: 'income' | 'outcome'
