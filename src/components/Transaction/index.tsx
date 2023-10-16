@@ -1,3 +1,4 @@
+import { priceFormatter, dateFormatter } from '../../utils/formatter'
 import {
   TransactionContainer,
   TransactionTable,
@@ -9,10 +10,6 @@ export interface TransactionTableProps {
   tableCategory: string
   tableDate: string
   tableExpense: 'income' | 'outcome'
-}
-
-const formatDate = (date: string) => {
-  return new Date(date).toLocaleDateString()
 }
 
 export const Transaction = ({
@@ -30,11 +27,12 @@ export const Transaction = ({
             <td>{tableDescription}</td>
             <td>
               <PriceHighLight variant={tableExpense}>
-                {`R$ ${tablePrice}`}
+                {tableExpense === 'outcome' && '- '}
+                {priceFormatter.format(tablePrice)}
               </PriceHighLight>
             </td>
             <td>{tableCategory}</td>
-            <td>{formatDate(tableDate)}</td>
+            <td>{dateFormatter.format(new Date(tableDate))}</td>
           </tr>
         </tbody>
       </TransactionTable>

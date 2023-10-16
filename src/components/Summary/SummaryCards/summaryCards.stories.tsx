@@ -15,7 +15,7 @@ export const Entradas: StoryObj<typeof SummaryCard> = {
     coloring: 'gray',
     headerType: 'Entradas',
     icon: <ArrowUpCircle size={32} color="#00B37E" />,
-    values: 'R$ 12.123,00',
+    price: 12.123,
   },
 }
 
@@ -24,7 +24,7 @@ export const Saídas: StoryObj<typeof SummaryCard> = {
     coloring: 'gray',
     headerType: 'Saída',
     icon: <ArrowDownCircle size={32} color="#F75A68" />,
-    values: 'R$ 4.456,00',
+    price: 4.454,
   },
 }
 
@@ -33,6 +33,6 @@ export const Total: StoryObj<typeof SummaryCard> = {
     coloring: 'green',
     headerType: 'Total',
     icon: <DollarSign size={32} color="#FFFFFF" />,
-    values: 'R$ 15.456,00',
+    price: 15.456,
   },
 }

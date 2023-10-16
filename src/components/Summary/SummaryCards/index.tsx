@@ -1,26 +1,27 @@
 import { ReactNode } from 'react'
 import { SummaryCardStyle } from './styles'
+import { priceFormatter } from '../../../utils/formatter'
 
-type CardValues = {
-  headerType: string
+type CardValues<T, U> = {
+  headerType: T
   icon: ReactNode
-  values: string
+  price: U
   coloring?: 'green' | 'gray'
 }
 
 export const SummaryCard = ({
   headerType,
-  values,
+  price,
   icon,
   coloring,
-}: CardValues) => {
+}: CardValues<string, number>) => {
   return (
     <SummaryCardStyle variant={coloring}>
       <header>
-        <span>{headerType}</span>
+        <div>{headerType}</div>
         {icon}
       </header>
-      <strong>{values}</strong>
+      <strong>{priceFormatter.format(price)}</strong>
     </SummaryCardStyle>
   )
 }

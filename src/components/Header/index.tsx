@@ -8,12 +8,12 @@ import { NewTransactionModal } from '../NewTransaction'
 import logoImg from '../../assets/logo.svg'
 import * as Dialog from '@radix-ui/react-dialog'
 
-export type HeaderProps = {
-  title: string
-  name: string
+export interface HeaderProps<T> {
+  title: T
+  name: T
 }
 
-export const Header = ({ title, name }: HeaderProps) => {
+export const Header = ({ title, name }: HeaderProps<string>) => {
   return (
     <HeaderContainer>
       <HeaderContent>
