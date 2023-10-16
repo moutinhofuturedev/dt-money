@@ -6,7 +6,7 @@ describe('Transaction', () => {
     tableDescription: 'Item A',
     tablePrice: 100.0,
     tableCategory: 'Category',
-    tableDate: '2023-08-12',
+    tableDate: '12/08/2023',
     tableExpense: 'outcome',
   }
 
@@ -20,7 +20,7 @@ describe('Transaction', () => {
     const description = screen.getByText(mockTransaction.tableDescription)
     const price = screen.getByText(
       new RegExp(mockTransaction.tablePrice.toString()),
-    ) // Usar regex
+    )
     const category = screen.getByText(mockTransaction.tableCategory)
     const formatted = screen.getByText(formattedDate)
 
@@ -40,7 +40,7 @@ describe('Transaction', () => {
 
     const priceElements = screen.getAllByText(
       new RegExp(incomeTransaction.tablePrice.toString()),
-    ) // Usar regex
+    )
 
     expect(priceElements[0]).toBeInTheDocument()
   })
