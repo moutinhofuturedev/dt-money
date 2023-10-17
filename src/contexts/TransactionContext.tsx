@@ -24,7 +24,7 @@ export const TransactionsProvider = ({
 }: TransactionsProviderProps) => {
   const [transactions, setTransactions] = useState<TransactionType[]>([])
 
-  async function loadTransactions() {
+  const loadTransactions = async () => {
     const response: Response = await fetch('http://localhost:3000/transactions')
     const data: TransactionType[] = await response.json()
 
