@@ -1,7 +1,7 @@
 import { styled, css } from 'styled-components'
 
 export type SummaryCardsProps = {
-  variant?: 'green' | 'gray'
+  variant: 'green' | 'gray'
 }
 
 export const SummaryCardStyle = styled.div<SummaryCardsProps>`

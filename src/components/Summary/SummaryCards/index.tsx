@@ -2,11 +2,11 @@ import { ReactNode } from 'react'
 import { SummaryCardStyle } from './styles'
 import { priceFormatter } from '../../../utils/formatter'
 
-type CardValues<T, U> = {
+interface CardValues<T, U> {
   headerType: T
   icon: ReactNode
   price: U
-  coloring?: 'green' | 'gray'
+  coloring: 'green' | 'gray'
 }
 
 export const SummaryCard = ({
