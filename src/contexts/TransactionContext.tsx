@@ -10,7 +10,7 @@ export interface TransactionType {
 }
 interface TransactionsContextType {
   transactions: TransactionType[]
-  fetchTransactions: (query?: string) => Promise<void>
+  fetchTransactions?: (query?: string) => Promise<void>
 }
 interface TransactionsProviderProps {
   children: ReactNode
