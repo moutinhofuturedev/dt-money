@@ -1,9 +1,11 @@
 import { SearchFormContainer } from './styles'
 import { Search } from 'lucide-react'
 
+import { useContext } from 'react'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import * as z from 'zod'
+import { TransactionsContext } from '../../contexts/TransactionContext'
 
 const searchFormSchema = z.object({
   query: z.string(),
@@ -12,6 +14,8 @@ const searchFormSchema = z.object({
 type SearchFormInputs = z.infer<typeof searchFormSchema>
 
 export const SearchForm = () => {
+  const { fetchTransactions } = useContext(TransactionsContext)
+
   const {
     register,
     handleSubmit,
@@ -20,10 +24,10 @@ export const SearchForm = () => {
     resolver: zodResolver(searchFormSchema),
   })
 
-  const handleSearchTransactions = async (data: SearchFormInputs) => {
-    await new Promise((resolve) => setTimeout(resolve, 2000))
+  const handleSearchTransactions = async ({ query }: SearchFormInputs) => {
+    await fetchTransactions(query)
 
-    console.log(data)
+    console.log(query)
   }
 
   return (

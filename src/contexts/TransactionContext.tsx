@@ -8,35 +8,40 @@ export interface TransactionType {
   price: number
   createdAt: string
 }
-
-interface TransactionContextType {
+interface TransactionsContextType {
   transactions: TransactionType[]
+  fetchTransactions: (query?: string) => Promise<void>
 }
-
 interface TransactionsProviderProps {
   children: ReactNode
 }
 
-export const TransactionsContext = createContext({} as TransactionContextType)
+export const TransactionsContext = createContext({} as TransactionsContextType)
 
 export const TransactionsProvider = ({
   children,
 }: TransactionsProviderProps) => {
   const [transactions, setTransactions] = useState<TransactionType[]>([])
 
-  const loadTransactions = async () => {
-    const response: Response = await fetch('http://localhost:3000/transactions')
+  const fetchTransactions = async (query?: string) => {
+    const url = new URL('http://localhost:3000/transactions')
+
+    if (query) {
+      url.searchParams.append('q', query)
+    }
+
+    const response: Response = await fetch(url)
     const data: TransactionType[] = await response.json()
 
     setTransactions(data)
   }
 
   useEffect(() => {
-    loadTransactions()
+    fetchTransactions()
   }, [])
 
   return (
-    <TransactionsContext.Provider value={{ transactions }}>
+    <TransactionsContext.Provider value={{ transactions, fetchTransactions }}>
       {children}
     </TransactionsContext.Provider>
   )
