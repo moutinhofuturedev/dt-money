@@ -25,7 +25,9 @@ export const SearchForm = () => {
   })
 
   const handleSearchTransactions = async ({ query }: SearchFormInputs) => {
-    await fetchTransactions(query)
+    if (fetchTransactions) {
+      await fetchTransactions(query)
+    }
 
     console.log(query)
   }
