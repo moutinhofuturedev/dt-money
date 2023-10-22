@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NewTransactionModal should submit the form with invalid input and display error messages 1`] = `<div />`;

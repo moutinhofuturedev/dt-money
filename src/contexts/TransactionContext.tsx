@@ -8,8 +8,8 @@ export interface TransactionType {
   price: number
   createdAt: string
 }
-interface TransactionsContextType {
-  transactions: TransactionType[]
+export interface TransactionsContextType {
+  transactions?: TransactionType[]
   fetchTransactions?: (query?: string) => Promise<void>
 }
 interface TransactionsProviderProps {

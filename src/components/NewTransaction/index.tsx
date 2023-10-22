@@ -33,9 +33,13 @@ export const NewTransactionModal = () => {
   })
 
   const handleCreateNewTransaction = async (data: NewTransactionFormInputs) => {
-    await new Promise((resolve) => setTimeout(resolve, 2000))
+    try {
+      await new Promise((resolve) => setTimeout(resolve, 2000))
 
-    console.log(data)
+      console.log(data)
+    } catch (error) {
+      console.error('An error occurred:', error)
+    }
   }
 
   return (
