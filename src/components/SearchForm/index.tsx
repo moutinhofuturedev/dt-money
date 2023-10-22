@@ -5,7 +5,7 @@ import { useContext } from 'react'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import * as z from 'zod'
-import { TransactionsContext } from '../../contexts/TransactionContext'
+import { TransactionsContext } from '../../context/TransactionContext'
 
 const searchFormSchema = z.object({
   query: z.string(),

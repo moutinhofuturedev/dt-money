@@ -2,7 +2,7 @@ import { fireEvent, render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 
 import { SearchForm } from '.'
-import { TransactionsContext } from '../../contexts/TransactionContext'
+import { TransactionsContext } from '../../context/TransactionContext'
 
 describe('SearchForm', () => {
   it('renders SearchForm component', () => {

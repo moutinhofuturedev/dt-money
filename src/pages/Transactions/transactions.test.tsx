@@ -3,7 +3,7 @@ import { Transactions } from '.'
 import {
   TransactionsContext,
   TransactionType,
-} from '../../contexts/TransactionContext'
+} from '../../context/TransactionContext'
 
 const mockTransactions: TransactionType[] = [
   {
