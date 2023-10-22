@@ -5,7 +5,7 @@ import { priceFormatter } from '../../../utils/formatter'
 interface CardValues<T, U> {
   headerType: T
   icon: ReactNode
-  price: U
+  price?: U
   coloring: 'green' | 'gray'
 }
 
@@ -21,7 +21,7 @@ export const SummaryCard = ({
         <div>{headerType}</div>
         {icon}
       </header>
-      <strong>{priceFormatter.format(price)}</strong>
+      {price && <strong>{priceFormatter.format(price)}</strong>}
     </SummaryCardStyle>
   )
 }

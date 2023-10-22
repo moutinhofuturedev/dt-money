@@ -4,7 +4,7 @@ import { SummaryContainer } from './styles'
 import { ArrowUpCircle, ArrowDownCircle, DollarSign } from 'lucide-react'
 
 export const Summary = () => {
-  const { income, outcome, total } = useSummary()
+  const summary = useSummary()
 
   return (
     <SummaryContainer>
@@ -12,19 +12,19 @@ export const Summary = () => {
         coloring="gray"
         headerType="Entradas"
         icon={<ArrowUpCircle size={32} color="#00B37E" />}
-        price={income}
+        price={summary?.income}
       />
       <SummaryCard
         coloring="gray"
         headerType="Saídas"
         icon={<ArrowDownCircle size={32} color="#F75A68" />}
-        price={outcome}
+        price={summary?.outcome}
       />
       <SummaryCard
         coloring="green"
         headerType="Total"
         icon={<DollarSign size={32} color="#FFFFFF" />}
-        price={total}
+        price={summary?.total}
       />
     </SummaryContainer>
   )
