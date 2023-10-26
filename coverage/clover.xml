@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1697937735325" clover="3.2.0">
-  <project timestamp="1697937735325" name="All files">
-    <metrics statements="48" coveredstatements="32" conditionals="8" coveredconditionals="6" methods="17" coveredmethods="11" elements="73" coveredelements="49" complexity="0" loc="48" ncloc="48" packages="9" files="9" classes="9"/>
+<coverage generated="1698353823111" clover="3.2.0">
+  <project timestamp="1698353823111" name="All files">
+    <metrics statements="57" coveredstatements="32" conditionals="16" coveredconditionals="9" methods="18" coveredmethods="11" elements="91" coveredelements="52" complexity="0" loc="57" ncloc="57" packages="9" files="9" classes="9"/>
     <package name="components.Colors">
       <metrics statements="3" coveredstatements="3" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
       <file name="index.tsx" path="/Users/paulomoutinho/Rocketseat/Ignite/dt-money/src/components/Colors/index.tsx">
@@ -60,9 +60,9 @@
       </file>
     </package>
     <package name="components.Summary.SummaryCards">
-      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <metrics statements="2" coveredstatements="2" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
       <file name="index.tsx" path="/Users/paulomoutinho/Rocketseat/Ignite/dt-money/src/components/Summary/SummaryCards/index.tsx">
-        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <metrics statements="2" coveredstatements="2" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
         <line num="12" count="2" type="stmt"/>
         <line num="18" count="5" type="stmt"/>
       </file>
@@ -75,33 +75,42 @@
         <line num="22" count="4" type="stmt"/>
       </file>
     </package>
-    <package name="contexts">
-      <metrics statements="13" coveredstatements="2" conditionals="2" coveredconditionals="0" methods="3" coveredmethods="0"/>
-      <file name="TransactionContext.tsx" path="/Users/paulomoutinho/Rocketseat/Ignite/dt-money/src/contexts/TransactionContext.tsx">
-        <metrics statements="13" coveredstatements="2" conditionals="2" coveredconditionals="0" methods="3" coveredmethods="0"/>
-        <line num="19" count="3" type="stmt"/>
-        <line num="21" count="3" type="stmt"/>
-        <line num="24" count="0" type="stmt"/>
-        <line num="26" count="0" type="stmt"/>
-        <line num="27" count="0" type="stmt"/>
-        <line num="29" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="30" count="0" type="stmt"/>
-        <line num="33" count="0" type="stmt"/>
+    <package name="context">
+      <metrics statements="22" coveredstatements="2" conditionals="6" coveredconditionals="0" methods="4" coveredmethods="0"/>
+      <file name="TransactionContext.tsx" path="/Users/paulomoutinho/Rocketseat/Ignite/dt-money/src/context/TransactionContext.tsx">
+        <metrics statements="22" coveredstatements="2" conditionals="6" coveredconditionals="0" methods="4" coveredmethods="0"/>
+        <line num="12" count="3" type="stmt"/>
+        <line num="14" count="3" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
         <line num="34" count="0" type="stmt"/>
         <line num="36" count="0" type="stmt"/>
-        <line num="39" count="0" type="stmt"/>
-        <line num="40" count="0" type="stmt"/>
+        <line num="41" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="43" count="0" type="stmt"/>
+        <line num="45" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="46" count="0" type="stmt"/>
+        <line num="51" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="52" count="0" type="stmt"/>
+        <line num="54" count="0" type="stmt"/>
+        <line num="65" count="0" type="stmt"/>
+        <line num="66" count="0" type="stmt"/>
+        <line num="68" count="0" type="stmt"/>
+        <line num="69" count="0" type="stmt"/>
+        <line num="73" count="0" type="stmt"/>
       </file>
     </package>
     <package name="pages.Transactions">
-      <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="1" methods="2" coveredmethods="2"/>
       <file name="index.tsx" path="/Users/paulomoutinho/Rocketseat/Ignite/dt-money/src/pages/Transactions/index.tsx">
-        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="1" methods="2" coveredmethods="2"/>
         <line num="8" count="1" type="stmt"/>
         <line num="9" count="1" type="stmt"/>
         <line num="11" count="1" type="stmt"/>
-        <line num="17" count="2" type="stmt"/>
+        <line num="18" count="2" type="stmt"/>
       </file>
     </package>
   </project>
