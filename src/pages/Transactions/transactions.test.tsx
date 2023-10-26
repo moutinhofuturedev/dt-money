@@ -1,9 +1,7 @@
 import { render, screen } from '@testing-library/react'
 import { Transactions } from '.'
-import {
-  TransactionsContext,
-  TransactionType,
-} from '../../context/TransactionContext'
+import { TransactionsContext } from '../../context/TransactionContext'
+import { TransactionType } from '../../context/types/type'
 
 const mockTransactions: TransactionType[] = [
   {
