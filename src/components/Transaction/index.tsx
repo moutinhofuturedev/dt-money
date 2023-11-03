@@ -4,6 +4,7 @@ import {
   TransactionTable,
   PriceHighLight,
 } from './styles'
+import { CalendarCheck } from 'lucide-react'
 export interface TransactionTableProps {
   tableDescription: string
   tablePrice: number
@@ -32,7 +33,10 @@ export const Transaction = ({
               </PriceHighLight>
             </td>
             <td>{tableCategory}</td>
-            <td>{dateFormatter.format(new Date(tableDate))}</td>
+            <td>
+              <CalendarCheck size={18} />
+              {dateFormatter.format(new Date(tableDate))}
+            </td>
           </tr>
         </tbody>
       </TransactionTable>

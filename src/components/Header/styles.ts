@@ -22,6 +22,14 @@ export const HeaderLogo = styled.div`
   strong {
     font-size: 1.6rem;
     line-height: 160%;
+
+    @media (max-width: 768px) and (max-width: 992px) {
+      font-size: 1rem;
+    }
+  }
+
+  @media (max-width: 768px) and (max-width: 992px) {
+    gap: 0.2rem;
   }
 `
 
@@ -39,5 +47,10 @@ export const NewTransactionButton = styled.button`
 
   &:hover {
     background-color: ${(props) => props.theme['green-700']};
+  }
+
+  @media (max-width: 768px) and (max-width: 992px) {
+    font-size: 1rem;
+    min-width: 100px;
   }
 `

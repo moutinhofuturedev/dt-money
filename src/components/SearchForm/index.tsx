@@ -36,12 +36,13 @@ export const SearchForm = () => {
     <SearchFormContainer onSubmit={handleSubmit(handleSearchTransactions)}>
       <input
         placeholder="Busque por transações"
+        autoComplete="off"
         type="search"
         {...register('query')}
       />
       <button type="submit" disabled={isSubmitting}>
         <Search />
-        Buscar
+        <p>Buscar</p>
       </button>
     </SearchFormContainer>
   )

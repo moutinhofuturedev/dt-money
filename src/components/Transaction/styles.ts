@@ -28,7 +28,33 @@ export const TransactionTable = styled.table`
       &:last-child {
         border-top-right-radius: 6px;
         border-bottom-right-radius: 6px;
+
+        @media (max-width: 768px) and (max-width: 992px) {
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+          gap: 0.5rem;
+        }
       }
+
+      svg {
+        display: none;
+
+        @media (max-width: 768px) and (max-width: 992px) {
+          display: inline;
+        }
+      }
+
+      @media (max-width: 768px) and (max-width: 992px) {
+        padding: 1.5rem 1.5rem;
+        line-height: 0;
+      }
+    }
+
+    @media (max-width: 768px) and (max-width: 992px) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
   }
 `

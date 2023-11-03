@@ -106,6 +106,7 @@ export const NewTransactionModal = () => {
           <input
             type="text"
             placeholder="Descrição"
+            autoComplete="off"
             required
             {...register('description')}
           />
@@ -118,6 +119,7 @@ export const NewTransactionModal = () => {
           <input
             type="text"
             placeholder="Categoria"
+            autoComplete="off"
             required
             {...register('category')}
           />
