@@ -34,6 +34,7 @@ export const TransactionTable = styled.table`
           justify-content: flex-end;
           align-items: center;
           gap: 0.5rem;
+          color: ${(props) => props.theme['gray-500']};
         }
       }
 
@@ -74,4 +75,10 @@ export const PriceHighLight = styled.span<PriceHighLightProps>`
     css`
       color: ${(props) => props.theme['red-300']};
     `};
+
+  @media (max-width: 768px) and (max-width: 992px) {
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 700;
+  }
 `

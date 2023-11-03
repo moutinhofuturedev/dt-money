@@ -25,6 +25,15 @@ export const HeaderLogo = styled.div`
 
     @media (max-width: 768px) and (max-width: 992px) {
       font-size: 1rem;
+      font-weight: 700;
+      line-height: 160%;
+    }
+  }
+
+  img {
+    @media (max-width: 768px) and (max-width: 992px) {
+      height: 1.5625rem;
+      flex-shrink: 0;
     }
   }
 
@@ -50,7 +59,9 @@ export const NewTransactionButton = styled.button`
   }
 
   @media (max-width: 768px) and (max-width: 992px) {
-    font-size: 1rem;
+    font-size: 0.875rem;
+    font-weight: 700;
+    line-height: 160%;
     min-width: 100px;
   }
 `
