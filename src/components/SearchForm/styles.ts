@@ -19,6 +19,10 @@ export const SearchFormContainer = styled.form`
     &::placeholder {
       color: ${(props) => props.theme['gray-500']};
     }
+
+    @media (max-width: 768px) and (max-width: 992px) {
+      margin-bottom: 0.5rem;
+    }
   }
 
   button {
@@ -45,6 +49,16 @@ export const SearchFormContainer = styled.form`
       border-color: 1px solid ${(props) => props.theme['green-500']};
       color: ${(props) => props.theme.white};
       transition: background-color 0.2s, color 0.2s border-color 0.2s;
+    }
+
+    p {
+      @media (max-width: 768px) {
+        display: none;
+      }
+    }
+
+    @media (max-width: 768px) and (max-width: 992px) {
+      margin-bottom: 0.5rem;
     }
   }
 `

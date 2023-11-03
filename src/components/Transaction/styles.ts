@@ -28,7 +28,34 @@ export const TransactionTable = styled.table`
       &:last-child {
         border-top-right-radius: 6px;
         border-bottom-right-radius: 6px;
+
+        @media (max-width: 768px) and (max-width: 992px) {
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+          gap: 0.5rem;
+          color: ${(props) => props.theme['gray-500']};
+        }
       }
+
+      svg {
+        display: none;
+
+        @media (max-width: 768px) and (max-width: 992px) {
+          display: inline;
+        }
+      }
+
+      @media (max-width: 768px) and (max-width: 992px) {
+        padding: 1.5rem 1.5rem;
+        line-height: 0;
+      }
+    }
+
+    @media (max-width: 768px) and (max-width: 992px) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
   }
 `
@@ -48,4 +75,10 @@ export const PriceHighLight = styled.span<PriceHighLightProps>`
     css`
       color: ${(props) => props.theme['red-300']};
     `};
+
+  @media (max-width: 768px) and (max-width: 992px) {
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 700;
+  }
 `

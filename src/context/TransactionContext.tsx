@@ -22,18 +22,20 @@ export const TransactionsProvider = ({
       try {
         const response = await api.get('/transactions', {
           params: {
+            _sort: 'createdAt',
+            _order: 'desc',
             q: query,
           },
         })
 
-        toast.success('Sucesso na solicitação dos dados', {
+        toast.success('Sucesso na solicitação das transações', {
           duration: 5000,
           position: 'top-left',
         })
 
         setTransactions(response.data)
       } catch (error) {
-        toast.error('Erro na solicitação dos dados', {
+        toast.error('Erro na solicitação das transações', {
           duration: 5000,
           position: 'top-left',
         })
