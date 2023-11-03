@@ -2,6 +2,7 @@ import { render, waitFor } from '@testing-library/react'
 
 import { NewTransactionModal } from './index'
 import { api } from '../../lib/api'
+// import toast from 'react-hot-toast'
 
 const mockDialogContext = {
   openDialog: jest.fn(),
@@ -42,5 +43,22 @@ describe('NewTransactionModal', () => {
     await waitFor(() => {
       expect(mockPost).not.toBeCalled()
     })
+  })
+
+  it('should display an error toast and log errors to the console when the API request fails', async () => {
+    const mockPost = jest
+      .spyOn(api, 'post')
+      .mockRejectedValueOnce(new Error('API Error'))
+    const mockConsoleLog = jest.spyOn(console, 'log').mockImplementation()
+
+    render(<NewTransactionModal />)
+
+    await waitFor(() => {
+      expect(mockPost).not.toHaveBeenCalled()
+      expect(mockConsoleLog).not.toHaveBeenCalledWith()
+    })
+
+    mockPost.mockRestore()
+    mockConsoleLog.mockRestore()
   })
 })

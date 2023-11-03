@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1699029919069" clover="3.2.0">
-  <project timestamp="1699029919070" name="All files">
+<coverage generated="1699037647536" clover="3.2.0">
+  <project timestamp="1699037647536" name="All files">
     <metrics statements="47" coveredstatements="31" conditionals="18" coveredconditionals="9" methods="13" coveredmethods="11" elements="78" coveredelements="51" complexity="0" loc="47" ncloc="47" packages="8" files="8" classes="8"/>
     <package name="components.Colors">
       <metrics statements="3" coveredstatements="3" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
@@ -25,9 +25,9 @@
         <metrics statements="22" coveredstatements="6" conditionals="8" coveredconditionals="0" methods="3" coveredmethods="1"/>
         <line num="21" count="3" type="stmt"/>
         <line num="30" count="3" type="stmt"/>
-        <line num="37" count="5" type="stmt"/>
-        <line num="42" count="5" type="stmt"/>
-        <line num="44" count="5" type="stmt"/>
+        <line num="37" count="6" type="stmt"/>
+        <line num="42" count="6" type="stmt"/>
+        <line num="44" count="6" type="stmt"/>
         <line num="46" count="0" type="stmt"/>
         <line num="48" count="0" type="stmt"/>
         <line num="49" count="0" type="stmt"/>
@@ -43,7 +43,7 @@
         <line num="82" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="83" count="0" type="stmt"/>
         <line num="85" count="0" type="stmt"/>
-        <line num="96" count="5" type="stmt"/>
+        <line num="96" count="6" type="stmt"/>
         <line num="131" count="0" type="stmt"/>
       </file>
     </package>
