@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1698420231360" clover="3.2.0">
-  <project timestamp="1698420231361" name="All files">
-    <metrics statements="35" coveredstatements="30" conditionals="10" coveredconditionals="9" methods="14" coveredmethods="11" elements="59" coveredelements="50" complexity="0" loc="35" ncloc="35" packages="8" files="8" classes="8"/>
+<coverage generated="1699029919069" clover="3.2.0">
+  <project timestamp="1699029919070" name="All files">
+    <metrics statements="47" coveredstatements="31" conditionals="18" coveredconditionals="9" methods="13" coveredmethods="11" elements="78" coveredelements="51" complexity="0" loc="47" ncloc="47" packages="8" files="8" classes="8"/>
     <package name="components.Colors">
       <metrics statements="3" coveredstatements="3" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
       <file name="index.tsx" path="/Users/paulomoutinho/Rocketseat/Ignite/dt-money/src/components/Colors/index.tsx">
@@ -20,19 +20,31 @@
       </file>
     </package>
     <package name="components.NewTransaction">
-      <metrics statements="10" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="1"/>
+      <metrics statements="22" coveredstatements="6" conditionals="8" coveredconditionals="0" methods="3" coveredmethods="1"/>
       <file name="index.tsx" path="/Users/paulomoutinho/Rocketseat/Ignite/dt-money/src/components/NewTransaction/index.tsx">
-        <metrics statements="10" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="1"/>
-        <line num="15" count="3" type="stmt"/>
-        <line num="24" count="3" type="stmt"/>
-        <line num="30" count="4" type="stmt"/>
-        <line num="35" count="4" type="stmt"/>
-        <line num="36" count="0" type="stmt"/>
-        <line num="37" count="0" type="stmt"/>
-        <line num="39" count="0" type="stmt"/>
-        <line num="41" count="0" type="stmt"/>
-        <line num="45" count="4" type="stmt"/>
+        <metrics statements="22" coveredstatements="6" conditionals="8" coveredconditionals="0" methods="3" coveredmethods="1"/>
+        <line num="21" count="3" type="stmt"/>
+        <line num="30" count="3" type="stmt"/>
+        <line num="37" count="5" type="stmt"/>
+        <line num="42" count="5" type="stmt"/>
+        <line num="44" count="5" type="stmt"/>
+        <line num="46" count="0" type="stmt"/>
+        <line num="48" count="0" type="stmt"/>
+        <line num="49" count="0" type="stmt"/>
+        <line num="57" count="0" type="stmt"/>
+        <line num="59" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="60" count="0" type="stmt"/>
+        <line num="62" count="0" type="stmt"/>
+        <line num="68" count="0" type="stmt"/>
+        <line num="73" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="74" count="0" type="stmt"/>
+        <line num="76" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="77" count="0" type="stmt"/>
+        <line num="82" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="83" count="0" type="stmt"/>
+        <line num="85" count="0" type="stmt"/>
+        <line num="96" count="5" type="stmt"/>
+        <line num="131" count="0" type="stmt"/>
       </file>
     </package>
     <package name="components.SearchForm">
@@ -71,8 +83,8 @@
       <metrics statements="2" coveredstatements="2" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
       <file name="index.tsx" path="/Users/paulomoutinho/Rocketseat/Ignite/dt-money/src/components/Transaction/index.tsx">
         <metrics statements="2" coveredstatements="2" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
-        <line num="15" count="2" type="stmt"/>
-        <line num="22" count="4" type="stmt"/>
+        <line num="16" count="2" type="stmt"/>
+        <line num="23" count="4" type="stmt"/>
       </file>
     </package>
     <package name="pages.Transactions">
