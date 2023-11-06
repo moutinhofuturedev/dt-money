@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import { createContext, useEffect, useState, useCallback } from 'react'
+import { createContext, useEffect, useState, useCallback, useMemo } from 'react'
 import {
   TransactionType,
   TransactionsContextType,
@@ -58,6 +58,11 @@ export const TransactionsProvider = ({
     [abortController],
   )
 
+  const memoizedValue = useMemo(
+    () => ({ transactions, fetchTransactions }),
+    [transactions, fetchTransactions],
+  )
+
   useEffect(() => {
     fetchTransactions()
 
@@ -69,7 +74,7 @@ export const TransactionsProvider = ({
   return (
     <>
       <Toaster />
-      <TransactionsContext.Provider value={{ transactions, fetchTransactions }}>
+      <TransactionsContext.Provider value={memoizedValue}>
         {children}
       </TransactionsContext.Provider>
     </>
