@@ -29,7 +29,7 @@ export const SearchForm = () => {
       await fetchTransactions(query)
     }
 
-    console.log(query)
+    return null
   }
 
   return (

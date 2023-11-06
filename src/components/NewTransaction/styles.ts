@@ -7,7 +7,7 @@ export const Overlay = styled(Dialog.Overlay)`
   width: 100vw;
   height: 100vh;
   inset: 0;
-  background: #00000074;
+  background: #00000094;
 `
 
 export const Content = styled(Dialog.Content)`
@@ -21,6 +21,13 @@ export const Content = styled(Dialog.Content)`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+
+  h2 {
+    @media (max-width: 768px) {
+      font-size: 1.25rem;
+      line-height: 160%;
+    }
+  }
 
   form {
     margin-top: 2rem;
@@ -37,6 +44,12 @@ export const Content = styled(Dialog.Content)`
 
       &::placeholder {
         color: ${(props) => props.theme['gray-500']};
+      }
+
+      @media (max-width: 768px) {
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 140%;
       }
     }
 
@@ -60,11 +73,25 @@ export const Content = styled(Dialog.Content)`
         background: ${(props) => props.theme['green-700']};
         transition: background-color 0.2s;
       }
+
+      @media (max-width: 768px) {
+        display: flex;
+        padding: 12px 20px;
+        justify-content: center;
+        align-items: center;
+        gap: 0.625rem;
+
+        font-size: 1rem;
+        font-weight: 700;
+        line-height: 160%;
+      }
     }
   }
 
   @media (max-width: 768px) {
-    min-width: 22rem;
+    min-width: 23.5rem;
+    border-radius: 20px 20px 20px 20px;
+    box-shadow: 0px -4px 32px 0px rgba(0, 0, 0, 0.8);
   }
 `
 
@@ -131,5 +158,18 @@ export const TransactionTypeButton = styled(
     svg {
       color: ${(props) => props.theme.white};
     }
+  }
+
+  @media (max-width: 768px) {
+    display: flex;
+    padding: 1rem 1.5rem;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    flex: 1 0 0;
+
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 160%;
   }
 `
