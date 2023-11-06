@@ -56,13 +56,13 @@ export const NewTransactionModal = () => {
 
         reset()
 
+        toast.success('Transação cadastrada', {
+          duration: 5000,
+          position: 'top-left',
+        })
+
         if (fetchTransactions) {
           await fetchTransactions()
-
-          toast.success('Transação cadastrada', {
-            duration: 5000,
-            position: 'top-left',
-          })
         }
       } catch (error) {
         toast.error('Não foi possível cadastrar transação', {

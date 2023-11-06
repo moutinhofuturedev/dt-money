@@ -28,11 +28,6 @@ export const TransactionsProvider = ({
           },
         })
 
-        toast.success('Sucesso na solicitação das transações', {
-          duration: 5000,
-          position: 'top-left',
-        })
-
         setTransactions(response.data)
       } catch (error) {
         toast.error('Erro na solicitação das transações', {
@@ -41,7 +36,6 @@ export const TransactionsProvider = ({
         })
 
         if (axios.isAxiosError(error)) {
-          // Erro relacionado ao Axios
           const axiosError = error as AxiosError
 
           if (axiosError.response) {

@@ -2,7 +2,6 @@ import { render, waitFor } from '@testing-library/react'
 
 import { NewTransactionModal } from './index'
 import { api } from '../../lib/api'
-// import toast from 'react-hot-toast'
 
 const mockDialogContext = {
   openDialog: jest.fn(),
