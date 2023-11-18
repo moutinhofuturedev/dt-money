@@ -11,7 +11,7 @@ export const ColorsGrid = () => {
           key={key}
           data-testid={`color-entry-${key}`}
         >
-          <strong>${key}</strong>
+          <strong>{key}</strong>
           <span>{color}</span>
         </ColorsGridContent>
       </ColorsGridContainer>
